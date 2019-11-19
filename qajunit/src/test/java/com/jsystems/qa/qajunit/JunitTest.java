@@ -2,6 +2,8 @@ package com.jsystems.qa.qajunit;
 import com.google.common.truth.BigDecimalSubject;
 import org.junit.Before;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -25,7 +27,7 @@ public class JunitTest extends ConfigJunit   {
     }
 
     @AfterEach
-    public static void tearDownAll(){
+    public void tearDownEach(){
         System.out.println("===================AfterAll=================");
     }
 
@@ -55,6 +57,28 @@ public class JunitTest extends ConfigJunit   {
         assertFalse(0.2*0.2 ==0.04);
     }
 
+    @Test
+    public void  stringtest(){
+
+            String simpleString = "simplestring";
+            String simple = "simplestring";
+
+            String simpleString_2 = new String("simplestring");
+            String simpleString_3 = new String("simplestring");
+
+            assertTrue(simpleString =="simplestring");
+            assertTrue(simpleString == simple);
+            assertFalse(simpleString == simpleString_2);
+            assertFalse(simpleString_2 == simpleString_3);
+            assertTrue(simpleString.equals(simple));
+            assertTrue(simpleString_2.equals(simpleString_3));
+            int a = 1;
+            Integer a_1 = 1;
+        }
+    enum ParamEnum {
+        ENUM_ONE,
+        ENUM_TWO
+    }
     @Nested
     public class NestedTest{
 
@@ -74,4 +98,5 @@ public class JunitTest extends ConfigJunit   {
 
         }
     }
-}
+    }
+
