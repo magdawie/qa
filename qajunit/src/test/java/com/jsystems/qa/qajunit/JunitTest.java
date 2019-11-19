@@ -1,5 +1,6 @@
 package com.jsystems.qa.qajunit;
 import com.google.common.truth.BigDecimalSubject;
+import org.junit.Before;
 import org.junit.jupiter.api.*;
 
 import java.math.BigDecimal;
@@ -13,7 +14,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Junit tests")
 @Tag("unit")
-public class JunitTest {
+public class JunitTest extends ConfigJunit   {
+
+    @BeforeEach
+    public void setupEach(TestInfo testInfo){
+        System.out.println("================BeforeEach=====================");
+        System.out.println(testInfo.getDisplayName());
+        System.out.println(testInfo.getTags());
+        System.out.println(testInfo.getTestMethod());
+    }
+
+    @AfterEach
+    public static void tearDownAll(){
+        System.out.println("===================AfterAll=================");
+    }
 
     final String stringTestowy = "stringTestowy";
 
