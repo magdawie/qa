@@ -56,6 +56,20 @@ public class JunitTest extends ConfigJunit   {
         assertTrue(result == 0.04);
         assertFalse(0.2*0.2 ==0.04);
     }
+    @Test
+    public void newnewTest(){
+
+        String resultString = "Wordpress powers 34% of the internet";
+        String expectedString = "Wordpress powers [number]% of the internet";
+
+        assertTrue(resultString.startsWith("Wordpress powers"));
+        assertTrue(resultString.endsWith("% of the internet"));
+        assertThat(resultString).matches("(Wordpress powers )\\d+(% of the internet)");
+
+        String result = resultString.replace("Wordpress powers ", "").replace("% of the internet", "");
+        int resultNumber = Integer.parseInt(result);
+        assertTrue(resultNumber > 0);
+    }
 
     @Test
     public void  stringtest(){
@@ -79,6 +93,8 @@ public class JunitTest extends ConfigJunit   {
         ENUM_ONE,
         ENUM_TWO
     }
+
+
     @Nested
     public class NestedTest{
 
