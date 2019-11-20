@@ -38,6 +38,7 @@ public class ConfigFrontend {
     public void setUpEach() throws MalformedURLException {
         setupSystemProperties();
 
+//        driver = new ChromeDriver();
         driver = new FirefoxDriver();
 
         setupDriver();

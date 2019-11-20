@@ -1,5 +1,6 @@
 package com.jsystems.qa.qagui;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,11 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+@Tag("FrontTest")
 public class FrontendTest extends ConfigFrontend {
 
-    @Test("FrontTest")
-    public void frontTest() {
+    @Test
+    public void FrontTest() {
         driver.get("https://wordpress.com/");
         WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
         String text1 = textElement_1.getText();
@@ -22,7 +23,6 @@ public class FrontendTest extends ConfigFrontend {
         String text2 = textElement_2.getText();
         assertTrue(text2.contains("% of the internet."));
         assertThat(text2).matches("\\d+(% of the internet.)");
-
     }
 
     @Test
