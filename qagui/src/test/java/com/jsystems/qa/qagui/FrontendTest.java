@@ -2,24 +2,16 @@ package com.jsystems.qa.qagui;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import static com.google.common.truth.Truth.assertThat;
-import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FrontendTest extends ConfigFrontend {
 
-    @Test
+    @Test("FrontTest")
     public void frontTest() {
         driver.get("https://wordpress.com/");
         WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
@@ -87,8 +79,8 @@ public class FrontendTest extends ConfigFrontend {
         WebElement saveUserDetailsButton = driver.findElement(By.cssSelector(primaryButtonSelector));
         assertThat(!saveUserDetailsButton.isDisplayed());
 
-        assertThat(saveUserDetailsButton.isDisplayed());
-
+        assertTrue(saveUserDetailsButton.isDisplayed());
+        assertTrue(saveUserDetailsButton.isEnabled());
 
         //assertThat(userDisplayName.isDisplayed());
        // assertThat(userDisplayName.isEnabled());
