@@ -1,5 +1,6 @@
 package com.jsystems.qa.qagui;
 
+import com.systems.qa.qagui.Configuration;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -8,13 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static com.google.common.truth.Truth.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 @Tag("FrontTest")
 public class FrontendTest extends ConfigFrontend {
 
     @Test
     public void FrontTest() {
-        driver.get("https://wordpress.com/");
+        driver.get(Configuration.BASE_URL);
         WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
         String text1 = textElement_1.getText();
         assertTrue(text1.equals("WordPress powers"));
@@ -28,7 +30,7 @@ public class FrontendTest extends ConfigFrontend {
     @Test
     public void loginTest() {
 
-        driver.navigate().to("https://www.wordpress.com/");
+        driver.navigate().to(Configuration.BASE_URL);
 
         String loginIconSelector = ".x-nav-item.x-nav-item--wide.x-nav-item--logged-in";
         WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -45,7 +47,7 @@ public class FrontendTest extends ConfigFrontend {
         WebElement usernameInput = driver.findElement(By.id(usernameOrEmailSelector));
 
         usernameInput.clear();
-        usernameInput.sendKeys("testautomation112019@wp.pl");
+        usernameInput.sendKeys(Configuration.LOGIN);
 
         String primaryButtonSelector = ".button.form-button.is-primary";
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
@@ -56,7 +58,8 @@ public class FrontendTest extends ConfigFrontend {
         WebElement inputPassword = driver.findElement(By.id("password"));
 
         inputPassword.clear();
-        inputPassword.sendKeys("testautomation");
+        inputPassword.sendKeys(Configuration.PASSWORD);
+
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
         WebElement buttonPassword = driver.findElement(By.cssSelector(primaryButtonSelector));
         usernameButton.click();
@@ -80,8 +83,7 @@ public class FrontendTest extends ConfigFrontend {
         assertThat(!saveUserDetailsButton.isDisplayed());
 
         assertTrue(saveUserDetailsButton.isDisplayed());
-        assertTrue(saveUserDetailsButton.isEnabled());
-
+        assertFalse(saveUserDetailsButton.isEnabled());
         //assertThat(userDisplayName.isDisplayed());
        // assertThat(userDisplayName.isEnabled());
 
