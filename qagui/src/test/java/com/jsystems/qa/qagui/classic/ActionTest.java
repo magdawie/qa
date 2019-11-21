@@ -1,7 +1,7 @@
-package com.jsystems.qa.qagui;
+package com.jsystems.qa.qagui.classic;
 
-import com.jsystems.qa.qagui.page.LoginPage;
-import com.jsystems.qa.qagui.page.MainWordpressPage;
+import com.jsystems.qa.qagui.classic.page.LoginPage;
+import com.jsystems.qa.qagui.classic.page.MainWordpressPage;
 import com.systems.qa.qagui.Configuration;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

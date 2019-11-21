@@ -1,11 +1,8 @@
-package com.jsystems.qa.qagui;
+package com.jsystems.qa.qagui.classic;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

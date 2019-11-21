@@ -1,4 +1,4 @@
-package com.jsystems.qa.qagui;
+package com.jsystems.qa.qagui.classic;
 
 import com.systems.qa.qagui.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
