@@ -12,17 +12,13 @@ public class MainWordpressPage extends BasaePage {
         PageFactory.initElements(driver, this);
     }
     @FindBy(css = "h1.lpc-headline-title span:nth-child(1)")
+    //public WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
     public WebElement textElement_1;
-
     @FindBy(css = "h1.lpc-headline-title span:nth-child(2)")
+    //public WebElement textElement_2 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(2)"));
     public WebElement textElement_2;
-   // public WebElement textElement_2 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(2)"));
-
     public static final String loginIconSelector = ".x-nav-item.x-nav-item--wide.x-nav-item--logged-in";
-    // String loginIconSelector = ".x-nav-item.x-nav-item--wide.x-nav-item--logged-in";
-
     @FindBy(css = loginIconSelector)
     public WebElement loginIcon;
-        //WebElement loginIcon = driver.findElement(By.cssSelector(loginIconSelector));
 
 }
