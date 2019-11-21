@@ -67,7 +67,7 @@ public class WindowsTest extends ConfigFrontend{
 
     }
 
-    @Test
+  /*  @Test
     public void frameTest(){
         String contactUrl = "http://www.testdiary.com/training/selenium/selenium-test-page/";
 
@@ -296,5 +296,5 @@ public class WindowsTest extends ConfigFrontend{
         alert.dismiss();
 
         driver.switchTo().window(firstWIndow);
-    }
+    }*/
 }
