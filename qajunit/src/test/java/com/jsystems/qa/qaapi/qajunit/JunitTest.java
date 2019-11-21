@@ -1,12 +1,7 @@
-package com.jsystems.qa.qajunit;
-import com.google.common.truth.BigDecimalSubject;
-import org.junit.Before;
+package com.jsystems.qa.qaapi.qajunit;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.EnumSource;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.jsystems.qa.qagui.cucumber;
+package com.jsystems.qa.qaapi.qagui.cucumber;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

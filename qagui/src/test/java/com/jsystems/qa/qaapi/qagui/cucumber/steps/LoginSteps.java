@@ -1,9 +1,9 @@
-package com.jsystems.qa.qagui.cucumber.steps;
+package com.jsystems.qa.qaapi.qagui.cucumber.steps;
 
-import com.jsystems.qa.qagui.classic.page.LoginPage;
-import com.jsystems.qa.qagui.classic.page.MainWordpressPage;
-import com.jsystems.qa.qagui.classic.page.UserPage;
-import com.jsystems.qa.qagui.cucumber.ConfigStepCucumber;
+import com.jsystems.qa.qaapi.qagui.classic.page.LoginPage;
+import com.jsystems.qa.qaapi.qagui.classic.page.MainWordpressPage;
+import com.jsystems.qa.qaapi.qagui.classic.page.UserPage;
+import com.jsystems.qa.qaapi.qagui.cucumber.ConfigStepCucumber;
 import com.systems.qa.qagui.Configuration;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,10 +12,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import static com.google.common.truth.Truth.assertThat;
-import static com.jsystems.qa.qagui.classic.page.LoginPage.*;
-import static com.jsystems.qa.qagui.classic.page.MainWordpressPage.loginIconSelector;
-import static com.jsystems.qa.qagui.classic.page.UserPage.userAvatarSelector;
-import static com.jsystems.qa.qagui.classic.page.UserPage.userDisplayNameSelector;
+import static com.jsystems.qa.qaapi.qagui.classic.page.LoginPage.*;
+import static com.jsystems.qa.qaapi.qagui.classic.page.MainWordpressPage.loginIconSelector;
+import static com.jsystems.qa.qaapi.qagui.classic.page.UserPage.userAvatarSelector;
+import static com.jsystems.qa.qaapi.qagui.classic.page.UserPage.userDisplayNameSelector;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class UserService {
 
-    public List<User> getUsers(){
+    public static List<User> getUsers(){
         return RestAssured
                 .given()
                 .get("http://www.mocky.io/v2/5a6a58222e0000d0377a7789{id}/asdasd/")

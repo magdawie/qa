@@ -1,17 +1,13 @@
-package com.jsystems.qa;
-
-import com.jsystems.qa.qaapi.UserService;
+package com.jsystems.qa.qaapi;
 import com.jsystems.qa.qaapi.model.User;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
-
-import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.core.IsNull.notNullValue;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("ApiTest")
 @DisplayName("Api test")
@@ -43,19 +39,18 @@ public class ApiTest {
                 .body("[0].imie", equalTo("Piotr"))
                 .body("[0].nazwisko", notNullValue())
                 .body("[0].nazwisko", equalTo("Kowalski"));
-            //    .body("[0].device[0].device.model.produce", equalTo("dell"))) - bo nie dziala z kropkami nazwane, dla tegpo srednik dalej
+        //    .body("[0].device[0].device.model.produce", equalTo("dell"))) - bo nie dziala z kropkami nazwane, dla tegpo srednik dalej
 
     }
+
     @Test
     @DisplayName("Should returns list of users using jasonPath")
-    public void jasonPathTest(){
+    public void jasonPathTest() {
         List<User> users = UserService.getUsers();
-
-        TestCase.assertTrue(users.get(0).imie.equals("Piotr"));
-        TestCase.assertTrue(users.get(0).nazwisko.equals("Kowalski"));
-        TestCase.assertTrue(users.get(0).device.get(0).type.equals("computer"));
-        TestCase.assertTrue(users.get(0).device.get(0).deviceModel.get(0).screenSize == 17);
-        TestCase.assertTrue(users.size() > 0);
-
+        assertTrue(users.get(0).imie.equals("Piotr"));
+        assertTrue(users.get(0).nazwisko.equals("Kowalski"));
+        assertTrue(users.get(0).device.get(0).type.equals("computer"));
+        assertTrue(users.get(0).device.get(0).deviceModel.get(0).screenSize == 17);
+        assertTrue(users.size() > 0);
     }
 }

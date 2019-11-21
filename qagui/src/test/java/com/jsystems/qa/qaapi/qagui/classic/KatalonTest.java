@@ -1,4 +1,4 @@
-package com.jsystems.qa.qagui.classic;
+package com.jsystems.qa.qaapi.qagui.classic;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;

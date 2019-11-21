@@ -1,4 +1,4 @@
-package com.jsystems.qa.qagui.cucumber;
+package com.jsystems.qa.qaapi.qagui.cucumber;
 
 import com.systems.qa.qagui.Configuration;
 import io.cucumber.core.api.Scenario;

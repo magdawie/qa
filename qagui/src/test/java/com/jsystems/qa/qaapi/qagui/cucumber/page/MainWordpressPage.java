@@ -1,6 +1,6 @@
-package com.jsystems.qa.qagui.cucumber.page;
+package com.jsystems.qa.qaapi.qagui.cucumber.page;
 
-import com.jsystems.qa.qagui.classic.page.BasaePage;
+import com.jsystems.qa.qaapi.qagui.classic.page.BasaePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

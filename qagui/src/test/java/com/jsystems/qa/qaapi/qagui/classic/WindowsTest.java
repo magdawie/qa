@@ -1,4 +1,4 @@
-package com.jsystems.qa.qagui.classic;
+package com.jsystems.qa.qaapi.qagui.classic;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
