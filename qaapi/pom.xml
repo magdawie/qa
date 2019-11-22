@@ -12,6 +12,7 @@
 
     <properties>
     <tags>ApiTest</tags>
+        <exTags></exTags>
     </properties>
 
     <dependencies>
